@@ -20,6 +20,10 @@ header {
   background-attachment: fixed;
 }
 
+section:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
 nav {
   display: flex;
   background-color: #333;
@@ -48,15 +52,14 @@ main {
 
 section {
   text-align: center;
-  max-height: 100%;
-  padding: 50px 0px;
+  max-height: 100%;   /*20% in each secction of the window*/
+  padding: 2vh 0px 5vh 0px;
 }
 
-section h2 {
-  margin-bottom: 50px;
-}
+
 section h2 span {
-  padding: 10px 55px;
+  padding: 5px 3vw;
+  font-size: 2vw;
   border-radius: 20px;
   color: #fff;
   background: rgb(70,92,97);
@@ -70,9 +73,26 @@ video {
   margin-bottom: 10px;
 }
 
+
+img {
+  padding: 10px;
+}
+section h5 {
+  text-align: justify;
+  margin: 40px;
+}
+
+.carousel-cell {
+  width: 66%;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+.carousel-cell video {
+  max-width: 100%;
+}
+
 .iframe-container {
   position: relative;
-  overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
@@ -83,48 +103,31 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-}
-img {
-  padding: 10px;
-}
-section h5 {
-  margin: 40px;
-}
-.carousel {
-  max-height: 80vh;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
-.carousel-cell {
-  width: 66%;
-  margin-right: 50px;
-  border-radius: 5px;
-}
-.carousel-cell video {
-  max-width: 100%;
-}
-.carousel-cell iframe {
-  width: 100%;
-  height: 70%;
-}
 h3 {
   font-weight: 900;
-  font-size: 2em;
+  font-size: 1.2rem;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 #profile_img {
   border-radius: 50%;
+  width: 33%;
 }
 .handle a {
-  font-size: 1.25em;
-  background-color: rgb(150, 150, 150);
+  font-size: 20px;
+  background-color: rgb(204, 204, 204);
   margin: 5px 10px;
-  padding: 10px 15px;
+  padding: 10px 12px;
   border-radius: 20px;
   text-decoration: none;
 }
 .handle a i {
-  margin: 5px;
+  margin-right: 5px
 }
 .ln_handle {
   color: #0077b5;
@@ -157,6 +160,7 @@ h1 {
   box-shadow: 5px 5px 5px 3px #9c9c9c;
   margin: 20px;
   border-radius: 10px;
+
 }
 .inner-card {
   margin: 8px 6px 6px 8px;
@@ -166,10 +170,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
-#HackerRank {
-  border: black;
-  border-width: 4px;
-}
+
 #img_dish {
   border-radius: 6px;
   height: 220px;
@@ -178,9 +179,10 @@ h1 {
 
 .button {
   margin: auto;
-  padding: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  padding: 7px 15px 7px 15px;
   border-radius: 4px;
-  border: 3px solid rgb(38, 39, 39);
+  border: 2px solid rgb(38, 39, 39);
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
@@ -188,8 +190,11 @@ h1 {
 }
 .card_bottom{
     height: 200px;
+    text-align: justify;
+    overflow-y: auto;
 }
 .button:hover {
+  transform: translateY(2px);
   background-color: rgb(80, 82, 81);
   color: white;
 }
@@ -203,5 +208,20 @@ h1 {
   }
   .flex-align-right {
     margin-left: 0px;
+  }
+  h3{
+    font-size: 4vw;
+  }
+  #profile_img {
+    width: 35vw;
+  }
+  .handle a{
+    font-size: 2.5vw;
+    padding: 2vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  .button{
+    padding: 2.2vw;
   }
 }
