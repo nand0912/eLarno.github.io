@@ -211,6 +211,10 @@ h1 {
   nav {
     flex-direction: column;
   }
+  nav a{
+    padding: 8px;
+    font-size: 10px;
+  }
   .flex-align-right {
     margin-left: 0px;
   }
