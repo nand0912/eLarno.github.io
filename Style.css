@@ -56,6 +56,9 @@ section {
   padding: 2vh 0px 5vh 0px;
 }
 
+section h2{
+  margin: 8px; 
+}
 
 section h2 span {
   padding: 5px 3vw;
